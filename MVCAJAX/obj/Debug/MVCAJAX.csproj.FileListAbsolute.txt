@@ -48,13 +48,11 @@ E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana1
 E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\roslyn\VBCSCompiler.exe
 E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\roslyn\VBCSCompiler.exe.config
 E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\Antlr3.Runtime.dll
-E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\Domain.dll
 E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\EntityFramework.dll
 E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\EntityFramework.SqlServer.dll
 E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\Microsoft.Web.Infrastructure.dll
 E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\Newtonsoft.Json.dll
-E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\Service.dll
 E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\System.Web.Helpers.dll
 E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\System.Web.Mvc.dll
 E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\System.Web.Optimization.dll
@@ -63,10 +61,6 @@ E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana1
 E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\System.Web.WebPages.dll
 E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\System.Web.WebPages.Razor.dll
 E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\WebGrease.dll
-E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\Infraestructure.dll
-E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\Domain.pdb
-E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\Service.pdb
-E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\Service.dll.config
 E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\EntityFramework.xml
 E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\EntityFramework.SqlServer.xml
 E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\System.Web.Helpers.xml
@@ -79,8 +73,6 @@ E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana1
 E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\Newtonsoft.Json.xml
 E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\Antlr3.Runtime.pdb
 E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\Infraestructure.pdb
-E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\Infraestructure.dll.config
 E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\es\System.Web.Helpers.resources.dll
 E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\es\System.Web.Mvc.resources.dll
 E:\ciclo 6\Desarrollo de Aplicaciones Empresariales\ProjectsVisualStudio\Semana11\MVCAJAX\MVCAJAX\bin\es\System.Web.Optimization.resources.dll

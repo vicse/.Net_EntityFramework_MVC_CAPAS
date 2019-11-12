@@ -33,14 +33,15 @@
             <h2>Mantenimiento de Estudiantes</h2>
         </p>
 
-        <input type="text" id="txtBuscar" name="txtBuscar" value="" />
+        <input type="text" id="txtBuscar" name="txtBuscar" required />
         <button class="btn btn-primary btnBuscar">Buscar</button>
-
         <button class="btn btn-primary btnNuevo">Nuevo</button>
+        <button class="btn btn-primary btnRecargar" style="display:none;">Recargar</button>
+
 
         <br />
         <br />
-       
+
 
 
         <!-- Modal -->
@@ -55,7 +56,7 @@
                     </div>
                     <div class="modal-body">
                         <form class="form-horizontal">
-                            <input id="id" type="hidden" value="" />
+                            <input id="id" name="StundentID" type="hidden" value="" />
                             <div class="form-group row">
                                 <label class="col-sm-2 control-label" for="StudentCode">Codigo</label>
                                 <div class="col-sm-10">
@@ -118,12 +119,37 @@
 
 @section Scripts
 {
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script type="text/javascript">
+  
 
-        // boton para crear 
+        $('.btnBuscar').click(() => {
 
-        $('.btnNuevo').click( ()=> {        
+            console.log($('#txtBuscar').val());
+
+            if ( $('#txtBuscar').val().trim() == '') {
+                //alert('aea');
+                Swal.fire('Ingresar el nombre a buscar!!!');
+                return;
+            }
+
+            $(".btnRecargar").show();
+            LoadDataFiltrada();
+            
+         
+
+        });
+
+        $('.btnRecargar').click(() => {
+
+            $('#txtBuscar').val('');
+            LoadData();
+            //location.reload();
+            $('.btnRecargar').remove();
+        });
+        
+
+        $('.btnNuevo').click( ()=> {
             $('#myModal').modal('show');
             $('#myModalLabel').text('Nuevo');
             $('#id').val('');
@@ -133,12 +159,10 @@
             $('#StudentAddress').val('');
         });
 
-        $('.btnBuscar').click(() => {
-
-            LoadDataFiltrada();
-
-        });
-
+       
+        
+        
+        // boton para crear
 
         $(function () {
 
@@ -159,7 +183,7 @@
                     success: function () {
 
                         LoadData();
-                       
+
                     },
                     error: function () {
 
@@ -172,11 +196,12 @@
 
             $("#btnGuardar").click(function () {
                 var std = {};
+                std.StundentID = $('#id').val();
                 std.codigo = $('#StudentCode').val();
                 std.studentName = $('#StudentName').val();
                 std.lastName = $('#StudentLastName').val();
                 std.studentAddress = $('#StudentAddress').val();
-                
+
                 val_id = $('#id').val();
 
                 if(val_id==''){
@@ -184,11 +209,11 @@
                     datos = '{ std: ' + JSON.stringify(std) + '}'
                 }else{
                     ruta = '@Url.Action("UpdateStudent")';
-                    datos =  '{ std: ' + JSON.stringify(std) + ' , Id : ' + val_id + ' }'
+                    datos =  '{ std: ' + JSON.stringify(std) + ' }'
                     //datos.id = val_id;
                 }
 
-            
+
                 console.log(std);
                 $.ajax({
                     type: "POST",
@@ -205,7 +230,7 @@
                         $('#StudentAddress').val('');
                         $('#myModal').modal('hide');
                         LoadData();
-                                               
+
                     },
                     error: function () {
 
@@ -223,12 +248,12 @@
             var filtro = $("#txtBuscar").val();
             console.log(filtro);
             $.ajax({
-                type: "POST",
+                type: "GET",
                 url: '@Url.Action("Busqueda")',
                 dataType: "json",
-                data: { "NombreApellido" : filtro },                     
+                data: { "nombre" : filtro },
                 success: function (data) {
-                    console.log(data);     
+                    console.log(data);
                     var items = '';
                     $.each(data, function (i, item) {
                         var rows = "<tr>"
@@ -241,13 +266,13 @@
                             + ' <button data-id="'+ item.StundentID +'" class="btn btn-danger btnEliminar"><i class="glyphicon glyphicon-trash"></i></button></td>'
                             + "</tr>";
                         $('#tblStudent tbody').append(rows);
-                    });                        
+                    });
 
                 },
                 error: function (ex) {
                     console.log(ex);
                     //var r = jQuery.parseJSON(ex.responseText);
-                            
+
                     alert("Message: " + r.Message);
                     alert("StackTrace: " + r.StackTrace);
                     alert("ExceptionType: " + r.ExceptionType);
@@ -263,11 +288,11 @@
 
             $.ajax({
                 type: "GET",
-                url: '@Url.Action("getStudent")',                    
+                url: '@Url.Action("getStudent")',
                 dataType: "json",
-                data: { id: ''},                    
+                data: { id: ''},
                 success: function (data) {
-                    console.log(data);     
+                    console.log(data);
                     var items = '';
                     $.each(data, function (i, item) {
                         var rows = "<tr>"
@@ -280,12 +305,12 @@
                             + ' <button data-id="'+ item.StundentID +'" class="btn btn-danger btnEliminar"><i class="glyphicon glyphicon-trash"></i></button></td>'
                             + "</tr>";
                         $('#tblStudent tbody').append(rows);
-                    });                        
+                    });
 
                 },
                 error: function (ex) {
                     var r = jQuery.parseJSON(data.responseText);
-                            
+
                     alert("Message: " + r.Message);
                     alert("StackTrace: " + r.StackTrace);
                     alert("ExceptionType: " + r.ExceptionType);
@@ -311,13 +336,13 @@
                 console.log(data);
 
              });
-           
+
 
         });
 
         $('#tblStudent').on('click', '.btnEliminar', function() {
             val_id = $(this).data('id');
-            if(confirm('Desea eliminar este registro?')){     
+            if(confirm('Desea eliminar este registro?')){
                 $.post( '@Url.Action("DeleteStudent")' , {id: val_id}, (data) => {
                     LoadData();
                 });

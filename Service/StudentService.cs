@@ -41,7 +41,7 @@ namespace Service
             List<Student> students = null;
             using (var context = new SchoolContext())
             {
-                students = context.Students.Where(x => x.Activo == true && x.StudentName.Contains(NombreApellido) || x.Activo == true && x.LastName.Contains(NombreApellido) ).ToList();
+                students = context.Students.Where(x => x.Activo == true && x.StudentName.Contains(NombreApellido) || x.Activo == true && x.LastName.Contains(NombreApellido)).ToList();
             }
 
             return students;
@@ -59,12 +59,12 @@ namespace Service
             }
         }
 
-        public void Update(Student studentNew, int ID)
+        public void Update(Student studentNew)
         {
             using (var context = new SchoolContext())
             {
-
-                var student = context.Students.Find(ID);
+                var student = new Student();
+                student = context.Students.Find(studentNew.StundentID);
 
                 student.FechaModificacion = studentNew.FechaModificacion;
                 student.StudentName = studentNew.StudentName;
